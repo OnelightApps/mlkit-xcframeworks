@@ -56,21 +56,6 @@ let package = Package(
             url: "\(releaseBase)/MLKitImageLabelingCommon.xcframework.zip",
             checksum: "03cd40ff3b2fe0e88b6c3bf9267f74b24bc650ea9b6eac35ea3dfecd27773520"
         ),
-        .binaryTarget(
-            name: "MLKitVisionKit",
-            url: "\(releaseBase)/MLKitVisionKit.xcframework.zip",
-            checksum: "f46c5c0faa1d90221973044e8439f83ac767db2a960a811d2a458193ee1815b3"
-        ),
-        .binaryTarget(
-            name: "MLKitObjectDetection",
-            url: "\(releaseBase)/MLKitObjectDetection.xcframework.zip",
-            checksum: "6d94f0ebd76a646280dced879b6a35f28a26e180e72fbe37dd92355da98ccd81"
-        ),
-        .binaryTarget(
-            name: "MLKitObjectDetectionCommon",
-            url: "\(releaseBase)/MLKitObjectDetectionCommon.xcframework.zip",
-            checksum: "a219b6169148ef66fc4c92457aee2f688e5dca83543ed7858ac987ba4386eea9"
-        ),
         .target(
             name: "MLKitRuntime",
             dependencies: [
@@ -82,10 +67,7 @@ let package = Package(
                 "MLKitTextRecognitionCommon",
                 "MLKitImageLabeling",
                 "MLKitImageLabelingCustom",
-                "MLKitImageLabelingCommon",
-                "MLKitVisionKit",
-                "MLKitObjectDetection",
-                "MLKitObjectDetectionCommon"
+                "MLKitImageLabelingCommon"
             ],
             linkerSettings: [
                 .unsafeFlags([
